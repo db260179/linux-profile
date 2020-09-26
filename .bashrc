@@ -5,6 +5,7 @@ which chromium >/dev/null 2>&1 && export BROWSER=chromium
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+export PATH=/opt/vc/bin:$PATH
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -22,6 +23,8 @@ alias cls='clear; clear'
 alias cpr='rsync -ur --progress'
 alias mvr='rsync -ur --progress --remove-sent-files'
 alias git='LANG=C git'
+alias cputemp='vcgencmd measure_temp'
+alias cpuvolt='vcgencmd measure_volts core'
 
 complete -cf sudo
 complete -cd killall
